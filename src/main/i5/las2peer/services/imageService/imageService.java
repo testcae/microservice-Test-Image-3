@@ -78,9 +78,9 @@ public class imageService extends RESTService {
 
   @Api
   @SwaggerDefinition(
-      info = @Info(title = "Test Image 3", version = "$Metadata_Version$",
-          description = "$Metadata_Description$",
-          termsOfService = "$Metadata_Terms$",
+      info = @Info(title = "Test Image 3", version = "1.2",
+          description = "Service to serve image related stuffs",
+          termsOfService = "TERMS.txt",
           contact = @Contact(name = "MelisaCecilia", email = "CAEAddress@gmail.com") ,
           license = @License(name = "BSD",
               url = "https://github.com/testcae/microservice-Test-Image-3/blob/master/LICENSE.txt") ) )
@@ -89,7 +89,66 @@ public class imageService extends RESTService {
 
     private final imageService service = (imageService) Context.getCurrent().getService();
 
-    
+      /**
+   * 
+   * getImage
+   *
+   * 
+   * @param getPayload Payload for get image stuffs a String 
+   * 
+   * @return Response  
+   * 
+   */
+  @GET
+  @Path("//image")
+  @Produces(MediaType.APPLICATION_JSON)
+  @Consumes(MediaType.TEXT_PLAIN)
+  @ApiResponses(value = {
+       @ApiResponse(code = HttpURLConnection.HTTP_OK, message = "getResponse")
+  })
+  @ApiOperation(value = "getImage", notes = "$HTTP_Method_Description")
+  public Response getImage(String getPayload) {
+
+    // getResponse
+    boolean getResponse_condition = true;
+    if(getResponse_condition) {
+      JSONObject getResponseResult = new JSONObject();
+      return Response.status(HttpURLConnection.HTTP_OK).entity(getResponseResult.toJSONString()).build();
+    }
+    return null;
+  }
+
+  /**
+   * 
+   * postImage
+   *
+   * 
+   * @param postPayload payload for post image stuffs a JSONObject 
+   * 
+   * @return Response  
+   * 
+   */
+  @POST
+  @Path("//image")
+  @Produces(MediaType.TEXT_PLAIN)
+  @Consumes(MediaType.TEXT_PLAIN)
+  @ApiResponses(value = {
+       @ApiResponse(code = HttpURLConnection.HTTP_OK, message = "postResponse")
+  })
+  @ApiOperation(value = "postImage", notes = "$HTTP_Method_Description")
+  public Response postImage(String postPayload) {
+    JSONObject postPayload_JSON = (JSONObject) JSONValue.parse(postPayload);
+
+    // postResponse
+    boolean postResponse_condition = true;
+    if(postResponse_condition) {
+      String postResponseResult = "Some String";
+      return Response.status(HttpURLConnection.HTTP_OK).entity(postResponseResult).build();
+    }
+    return null;
+  }
+
+
 
   }
 
