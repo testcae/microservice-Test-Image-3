@@ -94,7 +94,7 @@ public class imageService extends RESTService {
    * getImage
    *
    * 
-   * @param getPayload Payload for get image stuffs a String 
+   * @param getPayload Payload for get image stuffs a String
    * 
    * @return Response  
    * 
@@ -123,7 +123,7 @@ public class imageService extends RESTService {
    * postImage
    *
    * 
-   * @param postPayload payload for post image stuffs a JSONObject 
+   * @param postPayload payload for post image stuffs a JSONObject
    * 
    * @return Response  
    * 
