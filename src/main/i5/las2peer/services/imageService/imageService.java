@@ -43,7 +43,7 @@ import org.json.simple.*;
  * outsourced to (imported) classes.
  *
  */
-@ServicePath("http://ec2-18-220-35-172.us-east-2.compute.amazonaws.com:8888")
+@ServicePath("")
 public class imageService extends RESTService {
 
 
@@ -100,7 +100,7 @@ public class imageService extends RESTService {
    * 
    */
   @GET
-  @Path("//image")
+  @Path("/getImage")
   @Produces(MediaType.APPLICATION_JSON)
   @Consumes(MediaType.TEXT_PLAIN)
   @ApiResponses(value = {
@@ -129,7 +129,7 @@ public class imageService extends RESTService {
    * 
    */
   @POST
-  @Path("//image")
+  @Path("/postImage")
   @Produces(MediaType.TEXT_PLAIN)
   @Consumes(MediaType.TEXT_PLAIN)
   @ApiResponses(value = {
