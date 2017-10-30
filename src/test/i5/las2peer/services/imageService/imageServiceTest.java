@@ -49,7 +49,7 @@ public class imageServiceTest {
   // version does not matter in tests
   private static final ServiceNameVersion testTemplateService = new ServiceNameVersion(imageService.class.getCanonicalName(),"0.1");
 
-  private static final String mainPath = "";
+  private static final String mainPath = "image/";
 
 
   /**
